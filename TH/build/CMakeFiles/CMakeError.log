@@ -1,0 +1,606 @@
+Performing C SOURCE FILE Test C_HAS_SSE1_1 failed with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_c0056/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_c0056.dir\build.make CMakeFiles/cmTC_c0056.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c0056.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_SSE1_1   -o CMakeFiles\cmTC_c0056.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c: In function 'main':
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:8:7: warning: SSE vector return without SSE enabled changes the ABI [-Wpsabi]
+     a = _mm_loadu_ps(vals);
+     ~~^~~~~~~~~~~~~~~~~~~~
+In file included from F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:2:0:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\xmmintrin.h:929:1: error: inlining failed in call to always_inline '_mm_loadu_ps': target specific option mismatch
+ _mm_loadu_ps (float const *__P)
+ ^~~~~~~~~~~~
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:8:7: note: called from here
+     a = _mm_loadu_ps(vals);
+     ~~^~~~~~~~~~~~~~~~~~~~
+CMakeFiles\cmTC_c0056.dir\build.make:64: recipe for target 'CMakeFiles/cmTC_c0056.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_c0056.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Makefile:125: recipe for target 'cmTC_c0056/fast' failed
+mingw32-make.exe: *** [cmTC_c0056/fast] Error 2
+
+Return value: 1
+Source file was:
+
+  #include <xmmintrin.h>
+
+  int main()
+  {
+    __m128 a;
+    float vals[4] = {0,0,0,0};
+    a = _mm_loadu_ps(vals);
+    return 0;
+  }
+Performing C SOURCE FILE Test C_HAS_SSE2_1 failed with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_0aafb/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_0aafb.dir\build.make CMakeFiles/cmTC_0aafb.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0aafb.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_SSE2_1   -o CMakeFiles\cmTC_0aafb.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c: In function 'main':
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:8:7: warning: SSE vector return without SSE enabled changes the ABI [-Wpsabi]
+     a = _mm_loadu_pd(vals);
+     ~~^~~~~~~~~~~~~~~~~~~~
+In file included from F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:2:0:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\emmintrin.h:124:1: error: inlining failed in call to always_inline '_mm_loadu_pd': target specific option mismatch
+ _mm_loadu_pd (double const *__P)
+ ^~~~~~~~~~~~
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:8:7: note: called from here
+     a = _mm_loadu_pd(vals);
+     ~~^~~~~~~~~~~~~~~~~~~~
+CMakeFiles\cmTC_0aafb.dir\build.make:64: recipe for target 'CMakeFiles/cmTC_0aafb.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_0aafb.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Makefile:125: recipe for target 'cmTC_0aafb/fast' failed
+mingw32-make.exe: *** [cmTC_0aafb/fast] Error 2
+
+Return value: 1
+Source file was:
+
+  #include <emmintrin.h>
+
+  int main()
+  {
+    __m128d a;
+    double vals[2] = {0,0};
+    a = _mm_loadu_pd(vals);
+    return 0;
+  }
+Performing C SOURCE FILE Test C_HAS_SSE3_1 failed with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_698e6/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_698e6.dir\build.make CMakeFiles/cmTC_698e6.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_698e6.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_SSE3_1   -o CMakeFiles\cmTC_698e6.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c: In function 'main':
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:8:7: warning: SSE vector return without SSE enabled changes the ABI [-Wpsabi]
+     a = _mm_lddqu_si128( (const __m128i*)vals );
+     ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:2:0:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\pmmintrin.h:110:1: error: inlining failed in call to always_inline '_mm_lddqu_si128': target specific option mismatch
+ _mm_lddqu_si128 (__m128i const *__P)
+ ^~~~~~~~~~~~~~~
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:8:7: note: called from here
+     a = _mm_lddqu_si128( (const __m128i*)vals );
+     ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CMakeFiles\cmTC_698e6.dir\build.make:64: recipe for target 'CMakeFiles/cmTC_698e6.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_698e6.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Makefile:125: recipe for target 'cmTC_698e6/fast' failed
+mingw32-make.exe: *** [cmTC_698e6/fast] Error 2
+
+Return value: 1
+Source file was:
+
+  #include <pmmintrin.h>
+
+  int main( )
+  {
+    const int vals[4] = {0,0,0,0};
+    __m128i a;
+    a = _mm_lddqu_si128( (const __m128i*)vals );
+    return 0;
+  }
+Performing C SOURCE FILE Test C_HAS_SSE4_1_1 failed with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_b8313/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_b8313.dir\build.make CMakeFiles/cmTC_b8313.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b8313.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_SSE4_1_1   -o CMakeFiles\cmTC_b8313.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c: In function 'main':
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:22: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0};
+                      ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:22: note: (near initialization for 'a')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:24: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0};
+                        ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:24: note: (near initialization for 'a')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:37: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0};
+                                     ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:37: note: (near initialization for 'b')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:39: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0};
+                                       ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:39: note: (near initialization for 'b')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:7:13: warning: SSE vector return without SSE enabled changes the ABI [-Wpsabi]
+     __m128i res = _mm_max_epi8(a, b);
+             ^~~
+In file included from F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:2:0:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\smmintrin.h:282:1: error: inlining failed in call to always_inline '_mm_max_epi8': target specific option mismatch
+ _mm_max_epi8 (__m128i __X, __m128i __Y)
+ ^~~~~~~~~~~~
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:7:13: note: called from here
+     __m128i res = _mm_max_epi8(a, b);
+             ^~~
+CMakeFiles\cmTC_b8313.dir\build.make:64: recipe for target 'CMakeFiles/cmTC_b8313.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_b8313.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Makefile:125: recipe for target 'cmTC_b8313/fast' failed
+mingw32-make.exe: *** [cmTC_b8313/fast] Error 2
+
+Return value: 1
+Source file was:
+
+  #include <smmintrin.h>
+
+  int main ()
+  {
+    __m128i a = {0,0,0,0}, b = {0,0,0,0};
+    __m128i res = _mm_max_epi8(a, b);
+
+    return 0;
+  }
+
+Performing C SOURCE FILE Test C_HAS_SSE4_2_1 failed with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_38fdd/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_38fdd.dir\build.make CMakeFiles/cmTC_38fdd.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_38fdd.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_SSE4_2_1   -o CMakeFiles\cmTC_38fdd.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c: In function 'main':
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:22: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                      ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:22: note: (near initialization for 'a')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:24: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                        ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:24: note: (near initialization for 'a')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:37: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                                     ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:37: note: (near initialization for 'b')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:39: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                                       ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:39: note: (near initialization for 'b')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:52: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                                                    ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:52: note: (near initialization for 'c')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:54: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                                                      ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:54: note: (near initialization for 'c')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:7:7: warning: SSE vector return without SSE enabled changes the ABI [-Wpsabi]
+     c = _mm_cmpgt_epi64(a, b);
+     ~~^~~~~~~~~~~~~~~~~~~~~~~
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\nmmintrin.h:31:0,
+                 from F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:2:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\smmintrin.h:796:1: error: inlining failed in call to always_inline '_mm_cmpgt_epi64': target specific option mismatch
+ _mm_cmpgt_epi64 (__m128i __X, __m128i __Y)
+ ^~~~~~~~~~~~~~~
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:7:7: note: called from here
+     c = _mm_cmpgt_epi64(a, b);
+     ~~^~~~~~~~~~~~~~~~~~~~~~~
+CMakeFiles\cmTC_38fdd.dir\build.make:64: recipe for target 'CMakeFiles/cmTC_38fdd.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_38fdd.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Makefile:125: recipe for target 'cmTC_38fdd/fast' failed
+mingw32-make.exe: *** [cmTC_38fdd/fast] Error 2
+
+Return value: 1
+Source file was:
+
+  #include <nmmintrin.h>
+
+  int main()
+  {
+    __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+    c = _mm_cmpgt_epi64(a, b);
+    return 0;
+  }
+
+Performing C SOURCE FILE Test C_HAS_AVX_1 failed with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_5e7b9/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_5e7b9.dir\build.make CMakeFiles/cmTC_5e7b9.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5e7b9.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_AVX_1   -o CMakeFiles\cmTC_5e7b9.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c: In function 'main':
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:7:7: warning: AVX vector return without AVX enabled changes the ABI [-Wpsabi]
+     a = _mm256_set1_ps(0);
+     ~~^~~~~~~~~~~~~~~~~~~
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\immintrin.h:41:0,
+                 from F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:2:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\avxintrin.h:1285:1: error: inlining failed in call to always_inline '_mm256_set1_ps': target specific option mismatch
+ _mm256_set1_ps (float __A)
+ ^~~~~~~~~~~~~~
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:7:7: note: called from here
+     a = _mm256_set1_ps(0);
+     ~~^~~~~~~~~~~~~~~~~~~
+CMakeFiles\cmTC_5e7b9.dir\build.make:64: recipe for target 'CMakeFiles/cmTC_5e7b9.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_5e7b9.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Makefile:125: recipe for target 'cmTC_5e7b9/fast' failed
+mingw32-make.exe: *** [cmTC_5e7b9/fast] Error 2
+
+Return value: 1
+Source file was:
+
+  #include <immintrin.h>
+
+  int main()
+  {
+    __m256 a;
+    a = _mm256_set1_ps(0);
+    return 0;
+  }
+
+Performing C SOURCE FILE Test C_HAS_AVX2_1 failed with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_80455/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_80455.dir\build.make CMakeFiles/cmTC_80455.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_80455.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_AVX2_1   -o CMakeFiles\cmTC_80455.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c: In function 'main':
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:7:7: warning: AVX vector return without AVX enabled changes the ABI [-Wpsabi]
+     a = _mm256_abs_epi16(a);
+     ~~^~~~~~~~~~~~~~~~~~~~~
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\immintrin.h:43:0,
+                 from F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:2:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\avx2intrin.h:63:1: error: inlining failed in call to always_inline '_mm256_abs_epi16': target specific option mismatch
+ _mm256_abs_epi16 (__m256i __A)
+ ^~~~~~~~~~~~~~~~
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:7:7: note: called from here
+     a = _mm256_abs_epi16(a);
+     ~~^~~~~~~~~~~~~~~~~~~~~
+CMakeFiles\cmTC_80455.dir\build.make:64: recipe for target 'CMakeFiles/cmTC_80455.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_80455.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Makefile:125: recipe for target 'cmTC_80455/fast' failed
+mingw32-make.exe: *** [cmTC_80455/fast] Error 2
+
+Return value: 1
+Source file was:
+
+  #include <immintrin.h>
+
+  int main()
+  {
+    __m256i a = {0};
+    a = _mm256_abs_epi16(a);
+    return 0;
+  }
+
+Performing C SOURCE FILE Test CXX_HAS_SSE1_1 failed with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_299e4/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_299e4.dir\build.make CMakeFiles/cmTC_299e4.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_299e4.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DCXX_HAS_SSE1_1   -o CMakeFiles\cmTC_299e4.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c: In function 'main':
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:8:7: warning: SSE vector return without SSE enabled changes the ABI [-Wpsabi]
+     a = _mm_loadu_ps(vals);
+     ~~^~~~~~~~~~~~~~~~~~~~
+In file included from F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:2:0:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\xmmintrin.h:929:1: error: inlining failed in call to always_inline '_mm_loadu_ps': target specific option mismatch
+ _mm_loadu_ps (float const *__P)
+ ^~~~~~~~~~~~
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:8:7: note: called from here
+     a = _mm_loadu_ps(vals);
+     ~~^~~~~~~~~~~~~~~~~~~~
+CMakeFiles\cmTC_299e4.dir\build.make:64: recipe for target 'CMakeFiles/cmTC_299e4.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_299e4.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Makefile:125: recipe for target 'cmTC_299e4/fast' failed
+mingw32-make.exe: *** [cmTC_299e4/fast] Error 2
+
+Return value: 1
+Source file was:
+
+  #include <xmmintrin.h>
+
+  int main()
+  {
+    __m128 a;
+    float vals[4] = {0,0,0,0};
+    a = _mm_loadu_ps(vals);
+    return 0;
+  }
+Performing C SOURCE FILE Test CXX_HAS_SSE2_1 failed with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_cb4ad/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_cb4ad.dir\build.make CMakeFiles/cmTC_cb4ad.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cb4ad.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DCXX_HAS_SSE2_1   -o CMakeFiles\cmTC_cb4ad.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c: In function 'main':
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:8:7: warning: SSE vector return without SSE enabled changes the ABI [-Wpsabi]
+     a = _mm_loadu_pd(vals);
+     ~~^~~~~~~~~~~~~~~~~~~~
+In file included from F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:2:0:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\emmintrin.h:124:1: error: inlining failed in call to always_inline '_mm_loadu_pd': target specific option mismatch
+ _mm_loadu_pd (double const *__P)
+ ^~~~~~~~~~~~
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:8:7: note: called from here
+     a = _mm_loadu_pd(vals);
+     ~~^~~~~~~~~~~~~~~~~~~~
+CMakeFiles\cmTC_cb4ad.dir\build.make:64: recipe for target 'CMakeFiles/cmTC_cb4ad.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_cb4ad.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Makefile:125: recipe for target 'cmTC_cb4ad/fast' failed
+mingw32-make.exe: *** [cmTC_cb4ad/fast] Error 2
+
+Return value: 1
+Source file was:
+
+  #include <emmintrin.h>
+
+  int main()
+  {
+    __m128d a;
+    double vals[2] = {0,0};
+    a = _mm_loadu_pd(vals);
+    return 0;
+  }
+Performing C SOURCE FILE Test CXX_HAS_SSE3_1 failed with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_70869/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_70869.dir\build.make CMakeFiles/cmTC_70869.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_70869.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DCXX_HAS_SSE3_1   -o CMakeFiles\cmTC_70869.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c: In function 'main':
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:8:7: warning: SSE vector return without SSE enabled changes the ABI [-Wpsabi]
+     a = _mm_lddqu_si128( (const __m128i*)vals );
+     ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:2:0:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\pmmintrin.h:110:1: error: inlining failed in call to always_inline '_mm_lddqu_si128': target specific option mismatch
+ _mm_lddqu_si128 (__m128i const *__P)
+ ^~~~~~~~~~~~~~~
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:8:7: note: called from here
+     a = _mm_lddqu_si128( (const __m128i*)vals );
+     ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CMakeFiles\cmTC_70869.dir\build.make:64: recipe for target 'CMakeFiles/cmTC_70869.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_70869.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Makefile:125: recipe for target 'cmTC_70869/fast' failed
+mingw32-make.exe: *** [cmTC_70869/fast] Error 2
+
+Return value: 1
+Source file was:
+
+  #include <pmmintrin.h>
+
+  int main( )
+  {
+    const int vals[4] = {0,0,0,0};
+    __m128i a;
+    a = _mm_lddqu_si128( (const __m128i*)vals );
+    return 0;
+  }
+Performing C SOURCE FILE Test CXX_HAS_SSE4_1_1 failed with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_f96dd/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_f96dd.dir\build.make CMakeFiles/cmTC_f96dd.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f96dd.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DCXX_HAS_SSE4_1_1   -o CMakeFiles\cmTC_f96dd.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c: In function 'main':
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:22: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0};
+                      ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:22: note: (near initialization for 'a')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:24: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0};
+                        ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:24: note: (near initialization for 'a')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:37: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0};
+                                     ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:37: note: (near initialization for 'b')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:39: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0};
+                                       ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:39: note: (near initialization for 'b')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:7:13: warning: SSE vector return without SSE enabled changes the ABI [-Wpsabi]
+     __m128i res = _mm_max_epi8(a, b);
+             ^~~
+In file included from F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:2:0:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\smmintrin.h:282:1: error: inlining failed in call to always_inline '_mm_max_epi8': target specific option mismatch
+ _mm_max_epi8 (__m128i __X, __m128i __Y)
+ ^~~~~~~~~~~~
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:7:13: note: called from here
+     __m128i res = _mm_max_epi8(a, b);
+             ^~~
+CMakeFiles\cmTC_f96dd.dir\build.make:64: recipe for target 'CMakeFiles/cmTC_f96dd.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_f96dd.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Makefile:125: recipe for target 'cmTC_f96dd/fast' failed
+mingw32-make.exe: *** [cmTC_f96dd/fast] Error 2
+
+Return value: 1
+Source file was:
+
+  #include <smmintrin.h>
+
+  int main ()
+  {
+    __m128i a = {0,0,0,0}, b = {0,0,0,0};
+    __m128i res = _mm_max_epi8(a, b);
+
+    return 0;
+  }
+
+Performing C SOURCE FILE Test CXX_HAS_SSE4_2_1 failed with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_adbe6/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_adbe6.dir\build.make CMakeFiles/cmTC_adbe6.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_adbe6.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DCXX_HAS_SSE4_2_1   -o CMakeFiles\cmTC_adbe6.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c: In function 'main':
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:22: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                      ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:22: note: (near initialization for 'a')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:24: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                        ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:24: note: (near initialization for 'a')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:37: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                                     ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:37: note: (near initialization for 'b')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:39: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                                       ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:39: note: (near initialization for 'b')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:52: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                                                    ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:52: note: (near initialization for 'c')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:54: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                                                      ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:54: note: (near initialization for 'c')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:7:7: warning: SSE vector return without SSE enabled changes the ABI [-Wpsabi]
+     c = _mm_cmpgt_epi64(a, b);
+     ~~^~~~~~~~~~~~~~~~~~~~~~~
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\nmmintrin.h:31:0,
+                 from F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:2:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\smmintrin.h:796:1: error: inlining failed in call to always_inline '_mm_cmpgt_epi64': target specific option mismatch
+ _mm_cmpgt_epi64 (__m128i __X, __m128i __Y)
+ ^~~~~~~~~~~~~~~
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:7:7: note: called from here
+     c = _mm_cmpgt_epi64(a, b);
+     ~~^~~~~~~~~~~~~~~~~~~~~~~
+CMakeFiles\cmTC_adbe6.dir\build.make:64: recipe for target 'CMakeFiles/cmTC_adbe6.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_adbe6.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Makefile:125: recipe for target 'cmTC_adbe6/fast' failed
+mingw32-make.exe: *** [cmTC_adbe6/fast] Error 2
+
+Return value: 1
+Source file was:
+
+  #include <nmmintrin.h>
+
+  int main()
+  {
+    __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+    c = _mm_cmpgt_epi64(a, b);
+    return 0;
+  }
+
+Performing C SOURCE FILE Test CXX_HAS_AVX_1 failed with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_3cf19/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_3cf19.dir\build.make CMakeFiles/cmTC_3cf19.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3cf19.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DCXX_HAS_AVX_1   -o CMakeFiles\cmTC_3cf19.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c: In function 'main':
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:7:7: warning: AVX vector return without AVX enabled changes the ABI [-Wpsabi]
+     a = _mm256_set1_ps(0);
+     ~~^~~~~~~~~~~~~~~~~~~
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\immintrin.h:41:0,
+                 from F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:2:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\avxintrin.h:1285:1: error: inlining failed in call to always_inline '_mm256_set1_ps': target specific option mismatch
+ _mm256_set1_ps (float __A)
+ ^~~~~~~~~~~~~~
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:7:7: note: called from here
+     a = _mm256_set1_ps(0);
+     ~~^~~~~~~~~~~~~~~~~~~
+CMakeFiles\cmTC_3cf19.dir\build.make:64: recipe for target 'CMakeFiles/cmTC_3cf19.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_3cf19.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Makefile:125: recipe for target 'cmTC_3cf19/fast' failed
+mingw32-make.exe: *** [cmTC_3cf19/fast] Error 2
+
+Return value: 1
+Source file was:
+
+  #include <immintrin.h>
+
+  int main()
+  {
+    __m256 a;
+    a = _mm256_set1_ps(0);
+    return 0;
+  }
+
+Performing C SOURCE FILE Test CXX_HAS_AVX2_1 failed with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_9b93b/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_9b93b.dir\build.make CMakeFiles/cmTC_9b93b.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9b93b.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DCXX_HAS_AVX2_1   -o CMakeFiles\cmTC_9b93b.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c: In function 'main':
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:7:7: warning: AVX vector return without AVX enabled changes the ABI [-Wpsabi]
+     a = _mm256_abs_epi16(a);
+     ~~^~~~~~~~~~~~~~~~~~~~~
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\immintrin.h:43:0,
+                 from F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:2:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\avx2intrin.h:63:1: error: inlining failed in call to always_inline '_mm256_abs_epi16': target specific option mismatch
+ _mm256_abs_epi16 (__m256i __A)
+ ^~~~~~~~~~~~~~~~
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:7:7: note: called from here
+     a = _mm256_abs_epi16(a);
+     ~~^~~~~~~~~~~~~~~~~~~~~
+CMakeFiles\cmTC_9b93b.dir\build.make:64: recipe for target 'CMakeFiles/cmTC_9b93b.dir/src.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_9b93b.dir/src.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Makefile:125: recipe for target 'cmTC_9b93b/fast' failed
+mingw32-make.exe: *** [cmTC_9b93b/fast] Error 2
+
+Return value: 1
+Source file was:
+
+  #include <immintrin.h>
+
+  int main()
+  {
+    __m256i a = {0};
+    a = _mm256_abs_epi16(a);
+    return 0;
+  }
+

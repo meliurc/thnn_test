@@ -1,0 +1,1325 @@
+The system is: Windows - 10.0.16299 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/MinGW/bin/gcc.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+
+The C compiler identification is GNU, found in "F:/test/torch7_TH/TH/build/CMakeFiles/3.10.1/CompilerIdC/a.exe"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/MinGW/bin/g++.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+
+The CXX compiler identification is GNU, found in "F:/test/torch7_TH/TH/build/CMakeFiles/3.10.1/CompilerIdCXX/a.exe"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_301fc/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_301fc.dir\build.make CMakeFiles/cmTC_301fc.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_301fc.dir/testCCompiler.c.obj
+C:\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_301fc.dir\testCCompiler.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\testCCompiler.c
+Linking C executable cmTC_301fc.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_301fc.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_301fc.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_301fc.dir/objects.a @CMakeFiles\cmTC_301fc.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe      -Wl,--whole-archive CMakeFiles\cmTC_301fc.dir/objects.a -Wl,--no-whole-archive  -o cmTC_301fc.exe -Wl,--out-implib,libcmTC_301fc.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_301fc.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_dee36/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_dee36.dir\build.make CMakeFiles/cmTC_dee36.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dee36.dir/CMakeCCompilerABI.c.obj
+C:\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_dee36.dir\CMakeCCompilerABI.c.obj   -c "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCCompilerABI.c"
+Linking C executable cmTC_dee36.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_dee36.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_dee36.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_dee36.dir/objects.a @CMakeFiles\cmTC_dee36.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_dee36.dir/objects.a -Wl,--no-whole-archive  -o cmTC_dee36.exe -Wl,--out-implib,libcmTC_dee36.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Using built-in specs.
+COLLECT_GCC=C:\MinGW\bin\gcc.exe
+COLLECT_LTO_WRAPPER=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe
+Target: mingw32
+Configured with: ../src/gcc-6.3.0/configure --build=x86_64-pc-linux-gnu --host=mingw32 --target=mingw32 --with-gmp=/mingw --with-mpfr --with-mpc=/mingw --with-isl=/mingw --prefix=/mingw --disable-win32-registry --with-arch=i586 --with-tune=generic --enable-languages=c,c++,objc,obj-c++,fortran,ada --with-pkgversion='MinGW.org GCC-6.3.0-1' --enable-static --enable-shared --enable-threads --with-dwarf2 --disable-sjlj-exceptions --enable-version-specific-runtime-libs --with-libiconv-prefix=/mingw --with-libintl-prefix=/mingw --enable-libstdcxx-debug --enable-libgomp --disable-libvtv --enable-nls
+Thread model: win32
+gcc version 6.3.0 (MinGW.org GCC-6.3.0-1) 
+COMPILER_PATH=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/;c:/mingw/bin/../libexec/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/
+LIBRARY_PATH=c:/mingw/bin/../lib/gcc/mingw32/6.3.0/;c:/mingw/bin/../lib/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_dee36.exe' '-mtune=generic' '-march=i586'
+ c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\jiguang\AppData\Local\Temp\ccH4mKlu.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -o cmTC_dee36.exe c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../.. --whole-archive CMakeFiles\cmTC_dee36.dir/objects.a --no-whole-archive --out-implib libcmTC_dee36.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_dee36.exe' '-mtune=generic' '-march=i586'
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_dee36/fast"]
+  ignore line: [C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_dee36.dir\build.make CMakeFiles/cmTC_dee36.dir/build]
+  ignore line: [mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_dee36.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [C:\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_dee36.dir\CMakeCCompilerABI.c.obj   -c "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCCompilerABI.c"]
+  ignore line: [Linking C executable cmTC_dee36.exe]
+  ignore line: ["C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_dee36.dir\link.txt --verbose=1]
+  ignore line: ["C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_dee36.dir/objects.a]
+  ignore line: [C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_dee36.dir/objects.a @CMakeFiles\cmTC_dee36.dir\objects1.rsp]
+  ignore line: [C:\MinGW\bin\gcc.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_dee36.dir/objects.a -Wl,--no-whole-archive  -o cmTC_dee36.exe -Wl,--out-implib,libcmTC_dee36.dll.a -Wl,--major-image-version,0,--minor-image-version,0 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=C:\MinGW\bin\gcc.exe]
+  ignore line: [COLLECT_LTO_WRAPPER=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe]
+  ignore line: [Target: mingw32]
+  ignore line: [Configured with: ../src/gcc-6.3.0/configure --build=x86_64-pc-linux-gnu --host=mingw32 --target=mingw32 --with-gmp=/mingw --with-mpfr --with-mpc=/mingw --with-isl=/mingw --prefix=/mingw --disable-win32-registry --with-arch=i586 --with-tune=generic --enable-languages=c,c++,objc,obj-c++,fortran,ada --with-pkgversion='MinGW.org GCC-6.3.0-1' --enable-static --enable-shared --enable-threads --with-dwarf2 --disable-sjlj-exceptions --enable-version-specific-runtime-libs --with-libiconv-prefix=/mingw --with-libintl-prefix=/mingw --enable-libstdcxx-debug --enable-libgomp --disable-libvtv --enable-nls]
+  ignore line: [Thread model: win32]
+  ignore line: [gcc version 6.3.0 (MinGW.org GCC-6.3.0-1) ]
+  ignore line: [COMPILER_PATH=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/]
+  ignore line: [c:/mingw/bin/../libexec/gcc/]
+  ignore line: [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/]
+  ignore line: [LIBRARY_PATH=c:/mingw/bin/../lib/gcc/mingw32/6.3.0/]
+  ignore line: [c:/mingw/bin/../lib/gcc/]
+  ignore line: [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib/]
+  ignore line: [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_dee36.exe' '-mtune=generic' '-march=i586']
+  link line: [ c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\jiguang\AppData\Local\Temp\ccH4mKlu.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -o cmTC_dee36.exe c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../.. --whole-archive CMakeFiles\cmTC_dee36.dir/objects.a --no-whole-archive --out-implib libcmTC_dee36.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o]
+    arg [c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/collect2.exe] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll] ==> ignore
+    arg [-plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe] ==> ignore
+    arg [-plugin-opt=-fresolution=C:\Users\jiguang\AppData\Local\Temp\ccH4mKlu.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
+    arg [-plugin-opt=-pass-through=-ladvapi32] ==> ignore
+    arg [-plugin-opt=-pass-through=-lshell32] ==> ignore
+    arg [-plugin-opt=-pass-through=-luser32] ==> ignore
+    arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
+    arg [-Bdynamic] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_dee36.exe] ==> ignore
+    arg [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o] ==> ignore
+    arg [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o] ==> ignore
+    arg [-Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0] ==> dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0]
+    arg [-Lc:/mingw/bin/../lib/gcc] ==> dir [c:/mingw/bin/../lib/gcc]
+    arg [-Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib] ==> dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib]
+    arg [-Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../..] ==> dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../..]
+    arg [--whole-archive] ==> ignore
+    arg [CMakeFiles\cmTC_dee36.dir/objects.a] ==> ignore
+    arg [--no-whole-archive] ==> ignore
+    arg [--out-implib] ==> ignore
+    arg [libcmTC_dee36.dll.a] ==> ignore
+    arg [--major-image-version] ==> ignore
+    arg [0] ==> ignore
+    arg [--minor-image-version] ==> ignore
+    arg [0] ==> ignore
+    arg [-lmingw32] ==> lib [mingw32]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lgcc_eh] ==> lib [gcc_eh]
+    arg [-lmoldname] ==> lib [moldname]
+    arg [-lmingwex] ==> lib [mingwex]
+    arg [-lmsvcrt] ==> lib [msvcrt]
+    arg [-ladvapi32] ==> lib [advapi32]
+    arg [-lshell32] ==> lib [shell32]
+    arg [-luser32] ==> lib [user32]
+    arg [-lkernel32] ==> lib [kernel32]
+    arg [-lmingw32] ==> lib [mingw32]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lgcc_eh] ==> lib [gcc_eh]
+    arg [-lmoldname] ==> lib [moldname]
+    arg [-lmingwex] ==> lib [mingwex]
+    arg [-lmsvcrt] ==> lib [msvcrt]
+    arg [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o] ==> ignore
+  remove lib [gcc_eh]
+  remove lib [msvcrt]
+  remove lib [gcc_eh]
+  remove lib [msvcrt]
+  collapse library dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0] ==> [C:/MinGW/lib/gcc/mingw32/6.3.0]
+  collapse library dir [c:/mingw/bin/../lib/gcc] ==> [C:/MinGW/lib/gcc]
+  collapse library dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib] ==> [C:/MinGW/mingw32/lib]
+  collapse library dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../..] ==> [C:/MinGW/lib]
+  implicit libs: [mingw32;gcc;moldname;mingwex;advapi32;shell32;user32;kernel32;mingw32;gcc;moldname;mingwex]
+  implicit dirs: [C:/MinGW/lib/gcc/mingw32/6.3.0;C:/MinGW/lib/gcc;C:/MinGW/mingw32/lib;C:/MinGW/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_a3f65/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_a3f65.dir\build.make CMakeFiles/cmTC_a3f65.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a3f65.dir/feature_tests.c.obj
+C:\MinGW\bin\gcc.exe   -std=c11 -o CMakeFiles\cmTC_a3f65.dir\feature_tests.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\feature_tests.c
+Linking C executable cmTC_a3f65.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_a3f65.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_a3f65.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_a3f65.dir/objects.a @CMakeFiles\cmTC_a3f65.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe      -Wl,--whole-archive CMakeFiles\cmTC_a3f65.dir/objects.a -Wl,--no-whole-archive  -o cmTC_a3f65.exe -Wl,--out-implib,libcmTC_a3f65.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_a3f65.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_d9879/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_d9879.dir\build.make CMakeFiles/cmTC_d9879.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d9879.dir/feature_tests.c.obj
+C:\MinGW\bin\gcc.exe   -std=c99 -o CMakeFiles\cmTC_d9879.dir\feature_tests.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\feature_tests.c
+Linking C executable cmTC_d9879.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_d9879.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_d9879.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_d9879.dir/objects.a @CMakeFiles\cmTC_d9879.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe      -Wl,--whole-archive CMakeFiles\cmTC_d9879.dir/objects.a -Wl,--no-whole-archive  -o cmTC_d9879.exe -Wl,--out-implib,libcmTC_d9879.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_d9879.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_65fc8/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_65fc8.dir\build.make CMakeFiles/cmTC_65fc8.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_65fc8.dir/feature_tests.c.obj
+C:\MinGW\bin\gcc.exe   -std=c90 -o CMakeFiles\cmTC_65fc8.dir\feature_tests.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\feature_tests.c
+Linking C executable cmTC_65fc8.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_65fc8.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_65fc8.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_65fc8.dir/objects.a @CMakeFiles\cmTC_65fc8.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe      -Wl,--whole-archive CMakeFiles\cmTC_65fc8.dir/objects.a -Wl,--no-whole-archive  -o cmTC_65fc8.exe -Wl,--out-implib,libcmTC_65fc8.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_65fc8.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the CXX compiler works passed with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_68cec/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_68cec.dir\build.make CMakeFiles/cmTC_68cec.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_68cec.dir/testCXXCompiler.cxx.obj
+C:\MinGW\bin\g++.exe     -o CMakeFiles\cmTC_68cec.dir\testCXXCompiler.cxx.obj -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
+Linking CXX executable cmTC_68cec.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_68cec.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_68cec.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_68cec.dir/objects.a @CMakeFiles\cmTC_68cec.dir\objects1.rsp
+C:\MinGW\bin\g++.exe      -Wl,--whole-archive CMakeFiles\cmTC_68cec.dir/objects.a -Wl,--no-whole-archive  -o cmTC_68cec.exe -Wl,--out-implib,libcmTC_68cec.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_68cec.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_7b06b/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_7b06b.dir\build.make CMakeFiles/cmTC_7b06b.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7b06b.dir/CMakeCXXCompilerABI.cpp.obj
+C:\MinGW\bin\g++.exe     -o CMakeFiles\cmTC_7b06b.dir\CMakeCXXCompilerABI.cpp.obj -c "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXCompilerABI.cpp"
+Linking CXX executable cmTC_7b06b.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_7b06b.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_7b06b.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_7b06b.dir/objects.a @CMakeFiles\cmTC_7b06b.dir\objects1.rsp
+C:\MinGW\bin\g++.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_7b06b.dir/objects.a -Wl,--no-whole-archive  -o cmTC_7b06b.exe -Wl,--out-implib,libcmTC_7b06b.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Using built-in specs.
+COLLECT_GCC=C:\MinGW\bin\g++.exe
+COLLECT_LTO_WRAPPER=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe
+Target: mingw32
+Configured with: ../src/gcc-6.3.0/configure --build=x86_64-pc-linux-gnu --host=mingw32 --with-gmp=/mingw --with-mpfr=/mingw --with-mpc=/mingw --with-isl=/mingw --prefix=/mingw --disable-win32-registry --target=mingw32 --with-arch=i586 --enable-languages=c,c++,objc,obj-c++,fortran,ada --with-pkgversion='MinGW.org GCC-6.3.0-1' --enable-static --enable-shared --enable-threads --with-dwarf2 --disable-sjlj-exceptions --enable-version-specific-runtime-libs --with-libiconv-prefix=/mingw --with-libintl-prefix=/mingw --enable-libstdcxx-debug --with-tune=generic --enable-libgomp --disable-libvtv --enable-nls
+Thread model: win32
+gcc version 6.3.0 (MinGW.org GCC-6.3.0-1) 
+COMPILER_PATH=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/;c:/mingw/bin/../libexec/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/
+LIBRARY_PATH=c:/mingw/bin/../lib/gcc/mingw32/6.3.0/;c:/mingw/bin/../lib/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7b06b.exe' '-shared-libgcc' '-mtune=generic' '-march=i586'
+ c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\jiguang\AppData\Local\Temp\ccOY6krw.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -u ___register_frame_info -u ___deregister_frame_info -o cmTC_7b06b.exe c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../.. --whole-archive CMakeFiles\cmTC_7b06b.dir/objects.a --no-whole-archive --out-implib libcmTC_7b06b.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7b06b.exe' '-shared-libgcc' '-mtune=generic' '-march=i586'
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_7b06b/fast"]
+  ignore line: [C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_7b06b.dir\build.make CMakeFiles/cmTC_7b06b.dir/build]
+  ignore line: [mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_7b06b.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: [C:\MinGW\bin\g++.exe     -o CMakeFiles\cmTC_7b06b.dir\CMakeCXXCompilerABI.cpp.obj -c "C:\Program Files\CMake\share\cmake-3.10\Modules\CMakeCXXCompilerABI.cpp"]
+  ignore line: [Linking CXX executable cmTC_7b06b.exe]
+  ignore line: ["C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_7b06b.dir\link.txt --verbose=1]
+  ignore line: ["C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_7b06b.dir/objects.a]
+  ignore line: [C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_7b06b.dir/objects.a @CMakeFiles\cmTC_7b06b.dir\objects1.rsp]
+  ignore line: [C:\MinGW\bin\g++.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_7b06b.dir/objects.a -Wl,--no-whole-archive  -o cmTC_7b06b.exe -Wl,--out-implib,libcmTC_7b06b.dll.a -Wl,--major-image-version,0,--minor-image-version,0 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=C:\MinGW\bin\g++.exe]
+  ignore line: [COLLECT_LTO_WRAPPER=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe]
+  ignore line: [Target: mingw32]
+  ignore line: [Configured with: ../src/gcc-6.3.0/configure --build=x86_64-pc-linux-gnu --host=mingw32 --with-gmp=/mingw --with-mpfr=/mingw --with-mpc=/mingw --with-isl=/mingw --prefix=/mingw --disable-win32-registry --target=mingw32 --with-arch=i586 --enable-languages=c,c++,objc,obj-c++,fortran,ada --with-pkgversion='MinGW.org GCC-6.3.0-1' --enable-static --enable-shared --enable-threads --with-dwarf2 --disable-sjlj-exceptions --enable-version-specific-runtime-libs --with-libiconv-prefix=/mingw --with-libintl-prefix=/mingw --enable-libstdcxx-debug --with-tune=generic --enable-libgomp --disable-libvtv --enable-nls]
+  ignore line: [Thread model: win32]
+  ignore line: [gcc version 6.3.0 (MinGW.org GCC-6.3.0-1) ]
+  ignore line: [COMPILER_PATH=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/]
+  ignore line: [c:/mingw/bin/../libexec/gcc/]
+  ignore line: [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/]
+  ignore line: [LIBRARY_PATH=c:/mingw/bin/../lib/gcc/mingw32/6.3.0/]
+  ignore line: [c:/mingw/bin/../lib/gcc/]
+  ignore line: [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib/]
+  ignore line: [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7b06b.exe' '-shared-libgcc' '-mtune=generic' '-march=i586']
+  link line: [ c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\jiguang\AppData\Local\Temp\ccOY6krw.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -u ___register_frame_info -u ___deregister_frame_info -o cmTC_7b06b.exe c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../.. --whole-archive CMakeFiles\cmTC_7b06b.dir/objects.a --no-whole-archive --out-implib libcmTC_7b06b.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o]
+    arg [c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/collect2.exe] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll] ==> ignore
+    arg [-plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe] ==> ignore
+    arg [-plugin-opt=-fresolution=C:\Users\jiguang\AppData\Local\Temp\ccOY6krw.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
+    arg [-plugin-opt=-pass-through=-ladvapi32] ==> ignore
+    arg [-plugin-opt=-pass-through=-lshell32] ==> ignore
+    arg [-plugin-opt=-pass-through=-luser32] ==> ignore
+    arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
+    arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
+    arg [-Bdynamic] ==> ignore
+    arg [-u] ==> ignore
+    arg [___register_frame_info] ==> ignore
+    arg [-u] ==> ignore
+    arg [___deregister_frame_info] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_7b06b.exe] ==> ignore
+    arg [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o] ==> ignore
+    arg [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o] ==> ignore
+    arg [-Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0] ==> dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0]
+    arg [-Lc:/mingw/bin/../lib/gcc] ==> dir [c:/mingw/bin/../lib/gcc]
+    arg [-Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib] ==> dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib]
+    arg [-Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../..] ==> dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../..]
+    arg [--whole-archive] ==> ignore
+    arg [CMakeFiles\cmTC_7b06b.dir/objects.a] ==> ignore
+    arg [--no-whole-archive] ==> ignore
+    arg [--out-implib] ==> ignore
+    arg [libcmTC_7b06b.dll.a] ==> ignore
+    arg [--major-image-version] ==> ignore
+    arg [0] ==> ignore
+    arg [--minor-image-version] ==> ignore
+    arg [0] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lmingw32] ==> lib [mingw32]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lmoldname] ==> lib [moldname]
+    arg [-lmingwex] ==> lib [mingwex]
+    arg [-lmsvcrt] ==> lib [msvcrt]
+    arg [-ladvapi32] ==> lib [advapi32]
+    arg [-lshell32] ==> lib [shell32]
+    arg [-luser32] ==> lib [user32]
+    arg [-lkernel32] ==> lib [kernel32]
+    arg [-lmingw32] ==> lib [mingw32]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lmoldname] ==> lib [moldname]
+    arg [-lmingwex] ==> lib [mingwex]
+    arg [-lmsvcrt] ==> lib [msvcrt]
+    arg [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o] ==> ignore
+  remove lib [msvcrt]
+  remove lib [msvcrt]
+  collapse library dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0] ==> [C:/MinGW/lib/gcc/mingw32/6.3.0]
+  collapse library dir [c:/mingw/bin/../lib/gcc] ==> [C:/MinGW/lib/gcc]
+  collapse library dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib] ==> [C:/MinGW/mingw32/lib]
+  collapse library dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../..] ==> [C:/MinGW/lib]
+  implicit libs: [stdc++;mingw32;gcc_s;gcc;moldname;mingwex;advapi32;shell32;user32;kernel32;mingw32;gcc_s;gcc;moldname;mingwex]
+  implicit dirs: [C:/MinGW/lib/gcc/mingw32/6.3.0;C:/MinGW/lib/gcc;C:/MinGW/mingw32/lib;C:/MinGW/lib]
+  implicit fwks: []
+
+
+
+
+Detecting CXX [-std=c++1z] compiler features compiled with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_d5c49/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_d5c49.dir\build.make CMakeFiles/cmTC_d5c49.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d5c49.dir/feature_tests.cxx.obj
+C:\MinGW\bin\g++.exe    -std=c++1z -o CMakeFiles\cmTC_d5c49.dir\feature_tests.cxx.obj -c F:\test\torch7_TH\TH\build\CMakeFiles\feature_tests.cxx
+Linking CXX executable cmTC_d5c49.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_d5c49.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_d5c49.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_d5c49.dir/objects.a @CMakeFiles\cmTC_d5c49.dir\objects1.rsp
+C:\MinGW\bin\g++.exe      -Wl,--whole-archive CMakeFiles\cmTC_d5c49.dir/objects.a -Wl,--no-whole-archive  -o cmTC_d5c49.exe -Wl,--out-implib,libcmTC_d5c49.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_d5c49.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++14] compiler features compiled with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_d4de0/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_d4de0.dir\build.make CMakeFiles/cmTC_d4de0.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d4de0.dir/feature_tests.cxx.obj
+C:\MinGW\bin\g++.exe    -std=c++14 -o CMakeFiles\cmTC_d4de0.dir\feature_tests.cxx.obj -c F:\test\torch7_TH\TH\build\CMakeFiles\feature_tests.cxx
+Linking CXX executable cmTC_d4de0.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_d4de0.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_d4de0.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_d4de0.dir/objects.a @CMakeFiles\cmTC_d4de0.dir\objects1.rsp
+C:\MinGW\bin\g++.exe      -Wl,--whole-archive CMakeFiles\cmTC_d4de0.dir/objects.a -Wl,--no-whole-archive  -o cmTC_d4de0.exe -Wl,--out-implib,libcmTC_d4de0.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_d4de0.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_31b13/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_31b13.dir\build.make CMakeFiles/cmTC_31b13.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_31b13.dir/feature_tests.cxx.obj
+C:\MinGW\bin\g++.exe    -std=c++11 -o CMakeFiles\cmTC_31b13.dir\feature_tests.cxx.obj -c F:\test\torch7_TH\TH\build\CMakeFiles\feature_tests.cxx
+Linking CXX executable cmTC_31b13.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_31b13.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_31b13.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_31b13.dir/objects.a @CMakeFiles\cmTC_31b13.dir\objects1.rsp
+C:\MinGW\bin\g++.exe      -Wl,--whole-archive CMakeFiles\cmTC_31b13.dir/objects.a -Wl,--no-whole-archive  -o cmTC_31b13.exe -Wl,--out-implib,libcmTC_31b13.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_31b13.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_08cde/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_08cde.dir\build.make CMakeFiles/cmTC_08cde.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_08cde.dir/feature_tests.cxx.obj
+C:\MinGW\bin\g++.exe    -std=c++98 -o CMakeFiles\cmTC_08cde.dir\feature_tests.cxx.obj -c F:\test\torch7_TH\TH\build\CMakeFiles\feature_tests.cxx
+Linking CXX executable cmTC_08cde.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_08cde.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_08cde.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_08cde.dir/objects.a @CMakeFiles\cmTC_08cde.dir\objects1.rsp
+C:\MinGW\bin\g++.exe      -Wl,--whole-archive CMakeFiles\cmTC_08cde.dir/objects.a -Wl,--no-whole-archive  -o cmTC_08cde.exe -Wl,--out-implib,libcmTC_08cde.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_08cde.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:0cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:0cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:0cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:0cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:0cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:0cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:0cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:0cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates
+Determining if the include file cpuid.h exists passed with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_5d973/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_5d973.dir\build.make CMakeFiles/cmTC_5d973.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5d973.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99    -o CMakeFiles\cmTC_5d973.dir\CheckIncludeFile.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Linking C executable cmTC_5d973.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_5d973.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_5d973.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_5d973.dir/objects.a @CMakeFiles\cmTC_5d973.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe  -std=gnu99     -Wl,--whole-archive CMakeFiles\cmTC_5d973.dir/objects.a -Wl,--no-whole-archive  -o cmTC_5d973.exe -Wl,--out-implib,libcmTC_5d973.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_5d973.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+
+Performing C SOURCE FILE Test HAVE_GCC_GET_CPUID succeeded with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_baee5/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_baee5.dir\build.make CMakeFiles/cmTC_baee5.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_baee5.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID   -o CMakeFiles\cmTC_baee5.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+Linking C executable cmTC_baee5.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_baee5.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_baee5.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_baee5.dir/objects.a @CMakeFiles\cmTC_baee5.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe  -std=gnu99 -DHAVE_GCC_GET_CPUID    -Wl,--whole-archive CMakeFiles\cmTC_baee5.dir/objects.a -Wl,--no-whole-archive  -o cmTC_baee5.exe -Wl,--out-implib,libcmTC_baee5.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_baee5.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <cpuid.h>
+        int main()
+        {
+            unsigned int eax, ebx, ecx, edx;
+            return __get_cpuid(0, &eax, &ebx, &ecx, &edx);
+        }
+Performing C SOURCE FILE Test NO_GCC_EBX_FPIC_BUG succeeded with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_92016/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_92016.dir\build.make CMakeFiles/cmTC_92016.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_92016.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DNO_GCC_EBX_FPIC_BUG   -o CMakeFiles\cmTC_92016.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+Linking C executable cmTC_92016.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_92016.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_92016.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_92016.dir/objects.a @CMakeFiles\cmTC_92016.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe  -std=gnu99 -DHAVE_GCC_GET_CPUID -DNO_GCC_EBX_FPIC_BUG    -Wl,--whole-archive CMakeFiles\cmTC_92016.dir/objects.a -Wl,--no-whole-archive  -o cmTC_92016.exe -Wl,--out-implib,libcmTC_92016.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_92016.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <stdint.h>
+    static inline void cpuid(uint32_t *eax, uint32_t *ebx,
+    			 uint32_t *ecx, uint32_t *edx)
+    {
+      uint32_t a = *eax, b, c = *ecx, d;
+      asm volatile ( "cpuid" : "+a"(a), "=b"(b), "+c"(c), "=d"(d) );
+      *eax = a; *ebx = b; *ecx = c; *edx = d;
+    }
+    int main() {
+      uint32_t a,b,c,d;
+      cpuid(&a, &b, &c, &d);
+      return 0;
+    }
+Performing C SOURCE FILE Test C_HAS_SSE1_2 succeeded with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_62a1e/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_62a1e.dir\build.make CMakeFiles/cmTC_62a1e.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_62a1e.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_SSE1_2 -msse   -o CMakeFiles\cmTC_62a1e.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+Linking C executable cmTC_62a1e.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_62a1e.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_62a1e.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_62a1e.dir/objects.a @CMakeFiles\cmTC_62a1e.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe  -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_SSE1_2 -msse    -Wl,--whole-archive CMakeFiles\cmTC_62a1e.dir/objects.a -Wl,--no-whole-archive  -o cmTC_62a1e.exe -Wl,--out-implib,libcmTC_62a1e.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_62a1e.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+  #include <xmmintrin.h>
+
+  int main()
+  {
+    __m128 a;
+    float vals[4] = {0,0,0,0};
+    a = _mm_loadu_ps(vals);
+    return 0;
+  }
+Performing C SOURCE FILE Test C_HAS_SSE2_2 succeeded with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_1a5e8/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_1a5e8.dir\build.make CMakeFiles/cmTC_1a5e8.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1a5e8.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_SSE2_2 -msse2   -o CMakeFiles\cmTC_1a5e8.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+Linking C executable cmTC_1a5e8.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_1a5e8.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_1a5e8.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_1a5e8.dir/objects.a @CMakeFiles\cmTC_1a5e8.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe  -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_SSE2_2 -msse2    -Wl,--whole-archive CMakeFiles\cmTC_1a5e8.dir/objects.a -Wl,--no-whole-archive  -o cmTC_1a5e8.exe -Wl,--out-implib,libcmTC_1a5e8.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_1a5e8.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+  #include <emmintrin.h>
+
+  int main()
+  {
+    __m128d a;
+    double vals[2] = {0,0};
+    a = _mm_loadu_pd(vals);
+    return 0;
+  }
+Performing C SOURCE FILE Test C_HAS_SSE3_2 succeeded with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_032b2/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_032b2.dir\build.make CMakeFiles/cmTC_032b2.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_032b2.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_SSE3_2 -msse3   -o CMakeFiles\cmTC_032b2.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+Linking C executable cmTC_032b2.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_032b2.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_032b2.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_032b2.dir/objects.a @CMakeFiles\cmTC_032b2.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe  -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_SSE3_2 -msse3    -Wl,--whole-archive CMakeFiles\cmTC_032b2.dir/objects.a -Wl,--no-whole-archive  -o cmTC_032b2.exe -Wl,--out-implib,libcmTC_032b2.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_032b2.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+  #include <pmmintrin.h>
+
+  int main( )
+  {
+    const int vals[4] = {0,0,0,0};
+    __m128i a;
+    a = _mm_lddqu_si128( (const __m128i*)vals );
+    return 0;
+  }
+Performing C SOURCE FILE Test C_HAS_SSE4_1_2 succeeded with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_493cc/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_493cc.dir\build.make CMakeFiles/cmTC_493cc.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_493cc.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_SSE4_1_2 -msse4.1   -o CMakeFiles\cmTC_493cc.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c: In function 'main':
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:22: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0};
+                      ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:22: note: (near initialization for 'a')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:24: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0};
+                        ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:24: note: (near initialization for 'a')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:37: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0};
+                                     ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:37: note: (near initialization for 'b')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:39: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0};
+                                       ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:39: note: (near initialization for 'b')
+Linking C executable cmTC_493cc.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_493cc.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_493cc.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_493cc.dir/objects.a @CMakeFiles\cmTC_493cc.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe  -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_SSE4_1_2 -msse4.1    -Wl,--whole-archive CMakeFiles\cmTC_493cc.dir/objects.a -Wl,--no-whole-archive  -o cmTC_493cc.exe -Wl,--out-implib,libcmTC_493cc.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_493cc.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+  #include <smmintrin.h>
+
+  int main ()
+  {
+    __m128i a = {0,0,0,0}, b = {0,0,0,0};
+    __m128i res = _mm_max_epi8(a, b);
+
+    return 0;
+  }
+
+Performing C SOURCE FILE Test C_HAS_SSE4_2_2 succeeded with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_f8c12/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_f8c12.dir\build.make CMakeFiles/cmTC_f8c12.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f8c12.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_SSE4_2_2 -msse4.2   -o CMakeFiles\cmTC_f8c12.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c: In function 'main':
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:22: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                      ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:22: note: (near initialization for 'a')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:24: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                        ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:24: note: (near initialization for 'a')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:37: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                                     ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:37: note: (near initialization for 'b')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:39: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                                       ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:39: note: (near initialization for 'b')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:52: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                                                    ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:52: note: (near initialization for 'c')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:54: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                                                      ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:54: note: (near initialization for 'c')
+Linking C executable cmTC_f8c12.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_f8c12.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_f8c12.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_f8c12.dir/objects.a @CMakeFiles\cmTC_f8c12.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe  -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_SSE4_2_2 -msse4.2    -Wl,--whole-archive CMakeFiles\cmTC_f8c12.dir/objects.a -Wl,--no-whole-archive  -o cmTC_f8c12.exe -Wl,--out-implib,libcmTC_f8c12.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_f8c12.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+  #include <nmmintrin.h>
+
+  int main()
+  {
+    __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+    c = _mm_cmpgt_epi64(a, b);
+    return 0;
+  }
+
+Performing C SOURCE FILE Test C_HAS_AVX_2 succeeded with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_b6dd5/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_b6dd5.dir\build.make CMakeFiles/cmTC_b6dd5.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b6dd5.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_AVX_2 -mavx   -o CMakeFiles\cmTC_b6dd5.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+Linking C executable cmTC_b6dd5.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_b6dd5.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_b6dd5.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_b6dd5.dir/objects.a @CMakeFiles\cmTC_b6dd5.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe  -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_AVX_2 -mavx    -Wl,--whole-archive CMakeFiles\cmTC_b6dd5.dir/objects.a -Wl,--no-whole-archive  -o cmTC_b6dd5.exe -Wl,--out-implib,libcmTC_b6dd5.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_b6dd5.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+  #include <immintrin.h>
+
+  int main()
+  {
+    __m256 a;
+    a = _mm256_set1_ps(0);
+    return 0;
+  }
+
+Performing C SOURCE FILE Test C_HAS_AVX2_2 succeeded with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_7770d/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_7770d.dir\build.make CMakeFiles/cmTC_7770d.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7770d.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_AVX2_2 -mavx2 -mfma   -o CMakeFiles\cmTC_7770d.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+Linking C executable cmTC_7770d.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_7770d.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_7770d.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_7770d.dir/objects.a @CMakeFiles\cmTC_7770d.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe  -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_AVX2_2 -mavx2 -mfma    -Wl,--whole-archive CMakeFiles\cmTC_7770d.dir/objects.a -Wl,--no-whole-archive  -o cmTC_7770d.exe -Wl,--out-implib,libcmTC_7770d.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_7770d.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+  #include <immintrin.h>
+
+  int main()
+  {
+    __m256i a = {0};
+    a = _mm256_abs_epi16(a);
+    return 0;
+  }
+
+Performing C SOURCE FILE Test CXX_HAS_SSE1_2 succeeded with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_5a484/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_5a484.dir\build.make CMakeFiles/cmTC_5a484.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5a484.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DCXX_HAS_SSE1_2 -msse   -o CMakeFiles\cmTC_5a484.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+Linking C executable cmTC_5a484.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_5a484.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_5a484.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_5a484.dir/objects.a @CMakeFiles\cmTC_5a484.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe  -std=gnu99 -DHAVE_GCC_GET_CPUID -DCXX_HAS_SSE1_2 -msse    -Wl,--whole-archive CMakeFiles\cmTC_5a484.dir/objects.a -Wl,--no-whole-archive  -o cmTC_5a484.exe -Wl,--out-implib,libcmTC_5a484.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_5a484.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+  #include <xmmintrin.h>
+
+  int main()
+  {
+    __m128 a;
+    float vals[4] = {0,0,0,0};
+    a = _mm_loadu_ps(vals);
+    return 0;
+  }
+Performing C SOURCE FILE Test CXX_HAS_SSE2_2 succeeded with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_29c8b/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_29c8b.dir\build.make CMakeFiles/cmTC_29c8b.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_29c8b.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DCXX_HAS_SSE2_2 -msse2   -o CMakeFiles\cmTC_29c8b.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+Linking C executable cmTC_29c8b.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_29c8b.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_29c8b.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_29c8b.dir/objects.a @CMakeFiles\cmTC_29c8b.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe  -std=gnu99 -DHAVE_GCC_GET_CPUID -DCXX_HAS_SSE2_2 -msse2    -Wl,--whole-archive CMakeFiles\cmTC_29c8b.dir/objects.a -Wl,--no-whole-archive  -o cmTC_29c8b.exe -Wl,--out-implib,libcmTC_29c8b.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_29c8b.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+  #include <emmintrin.h>
+
+  int main()
+  {
+    __m128d a;
+    double vals[2] = {0,0};
+    a = _mm_loadu_pd(vals);
+    return 0;
+  }
+Performing C SOURCE FILE Test CXX_HAS_SSE3_2 succeeded with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_f0e50/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_f0e50.dir\build.make CMakeFiles/cmTC_f0e50.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f0e50.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DCXX_HAS_SSE3_2 -msse3   -o CMakeFiles\cmTC_f0e50.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+Linking C executable cmTC_f0e50.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_f0e50.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_f0e50.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_f0e50.dir/objects.a @CMakeFiles\cmTC_f0e50.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe  -std=gnu99 -DHAVE_GCC_GET_CPUID -DCXX_HAS_SSE3_2 -msse3    -Wl,--whole-archive CMakeFiles\cmTC_f0e50.dir/objects.a -Wl,--no-whole-archive  -o cmTC_f0e50.exe -Wl,--out-implib,libcmTC_f0e50.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_f0e50.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+  #include <pmmintrin.h>
+
+  int main( )
+  {
+    const int vals[4] = {0,0,0,0};
+    __m128i a;
+    a = _mm_lddqu_si128( (const __m128i*)vals );
+    return 0;
+  }
+Performing C SOURCE FILE Test CXX_HAS_SSE4_1_2 succeeded with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_b18e5/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_b18e5.dir\build.make CMakeFiles/cmTC_b18e5.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b18e5.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DCXX_HAS_SSE4_1_2 -msse4.1   -o CMakeFiles\cmTC_b18e5.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c: In function 'main':
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:22: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0};
+                      ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:22: note: (near initialization for 'a')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:24: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0};
+                        ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:24: note: (near initialization for 'a')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:37: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0};
+                                     ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:37: note: (near initialization for 'b')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:39: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0};
+                                       ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:39: note: (near initialization for 'b')
+Linking C executable cmTC_b18e5.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_b18e5.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_b18e5.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_b18e5.dir/objects.a @CMakeFiles\cmTC_b18e5.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe  -std=gnu99 -DHAVE_GCC_GET_CPUID -DCXX_HAS_SSE4_1_2 -msse4.1    -Wl,--whole-archive CMakeFiles\cmTC_b18e5.dir/objects.a -Wl,--no-whole-archive  -o cmTC_b18e5.exe -Wl,--out-implib,libcmTC_b18e5.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_b18e5.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+  #include <smmintrin.h>
+
+  int main ()
+  {
+    __m128i a = {0,0,0,0}, b = {0,0,0,0};
+    __m128i res = _mm_max_epi8(a, b);
+
+    return 0;
+  }
+
+Performing C SOURCE FILE Test CXX_HAS_SSE4_2_2 succeeded with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_15897/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_15897.dir\build.make CMakeFiles/cmTC_15897.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_15897.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DCXX_HAS_SSE4_2_2 -msse4.2   -o CMakeFiles\cmTC_15897.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c: In function 'main':
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:22: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                      ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:22: note: (near initialization for 'a')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:24: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                        ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:24: note: (near initialization for 'a')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:37: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                                     ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:37: note: (near initialization for 'b')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:39: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                                       ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:39: note: (near initialization for 'b')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:52: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                                                    ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:52: note: (near initialization for 'c')
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:54: warning: excess elements in vector initializer
+     __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+                                                      ^
+F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c:6:54: note: (near initialization for 'c')
+Linking C executable cmTC_15897.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_15897.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_15897.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_15897.dir/objects.a @CMakeFiles\cmTC_15897.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe  -std=gnu99 -DHAVE_GCC_GET_CPUID -DCXX_HAS_SSE4_2_2 -msse4.2    -Wl,--whole-archive CMakeFiles\cmTC_15897.dir/objects.a -Wl,--no-whole-archive  -o cmTC_15897.exe -Wl,--out-implib,libcmTC_15897.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_15897.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+  #include <nmmintrin.h>
+
+  int main()
+  {
+    __m128i a = {0,0,0,0}, b = {0,0,0,0}, c = {0,0,0,0};
+    c = _mm_cmpgt_epi64(a, b);
+    return 0;
+  }
+
+Performing C SOURCE FILE Test CXX_HAS_AVX_2 succeeded with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_5562b/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_5562b.dir\build.make CMakeFiles/cmTC_5562b.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5562b.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DCXX_HAS_AVX_2 -mavx   -o CMakeFiles\cmTC_5562b.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+Linking C executable cmTC_5562b.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_5562b.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_5562b.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_5562b.dir/objects.a @CMakeFiles\cmTC_5562b.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe  -std=gnu99 -DHAVE_GCC_GET_CPUID -DCXX_HAS_AVX_2 -mavx    -Wl,--whole-archive CMakeFiles\cmTC_5562b.dir/objects.a -Wl,--no-whole-archive  -o cmTC_5562b.exe -Wl,--out-implib,libcmTC_5562b.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_5562b.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+  #include <immintrin.h>
+
+  int main()
+  {
+    __m256 a;
+    a = _mm256_set1_ps(0);
+    return 0;
+  }
+
+Performing C SOURCE FILE Test CXX_HAS_AVX2_2 succeeded with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_8d919/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_8d919.dir\build.make CMakeFiles/cmTC_8d919.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8d919.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -std=gnu99 -DHAVE_GCC_GET_CPUID -DCXX_HAS_AVX2_2 -mavx2 -mfma   -o CMakeFiles\cmTC_8d919.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+Linking C executable cmTC_8d919.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_8d919.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_8d919.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_8d919.dir/objects.a @CMakeFiles\cmTC_8d919.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe  -std=gnu99 -DHAVE_GCC_GET_CPUID -DCXX_HAS_AVX2_2 -mavx2 -mfma    -Wl,--whole-archive CMakeFiles\cmTC_8d919.dir/objects.a -Wl,--no-whole-archive  -o cmTC_8d919.exe -Wl,--out-implib,libcmTC_8d919.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_8d919.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+  #include <immintrin.h>
+
+  int main()
+  {
+    __m256i a = {0};
+    a = _mm256_abs_epi16(a);
+    return 0;
+  }
+
+Performing C SOURCE FILE Test HAS_C11_ATOMICS succeeded with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_760ae/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_760ae.dir\build.make CMakeFiles/cmTC_760ae.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_760ae.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -DUSE_AVX2 -DUSE_AVX -msse3 -DUSE_SSE3 -msse2 -DUSE_SSE2  -std=gnu99 -DHAVE_GCC_GET_CPUID -DHAS_C11_ATOMICS   -o CMakeFiles\cmTC_760ae.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+Linking C executable cmTC_760ae.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_760ae.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_760ae.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_760ae.dir/objects.a @CMakeFiles\cmTC_760ae.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -DUSE_AVX2 -DUSE_AVX -msse3 -DUSE_SSE3 -msse2 -DUSE_SSE2  -std=gnu99 -DHAVE_GCC_GET_CPUID -DHAS_C11_ATOMICS    -Wl,--whole-archive CMakeFiles\cmTC_760ae.dir/objects.a -Wl,--no-whole-archive  -o cmTC_760ae.exe -Wl,--out-implib,libcmTC_760ae.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_760ae.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+#include <stdatomic.h>
+int main()
+{
+  int a;
+  int oa;
+  atomic_store(&a, 1);
+  atomic_fetch_add(&a, 1);
+  oa = atomic_load(&a);
+  if(!atomic_compare_exchange_strong(&a, &oa, 3))
+    return -1;
+  return 0;
+}
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_ce860/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_ce860.dir\build.make CMakeFiles/cmTC_ce860.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ce860.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe   -msse4.1 -DUSE_SSE4_1 -msse4.2 -DUSE_SSE4_2 -DUSE_AVX2 -DUSE_AVX -msse3 -DUSE_SSE3 -msse2 -DUSE_SSE2  -std=gnu99 -DHAVE_GCC_GET_CPUID    -o CMakeFiles\cmTC_ce860.dir\CheckIncludeFile.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Linking C executable cmTC_ce860.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_ce860.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_ce860.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_ce860.dir/objects.a @CMakeFiles\cmTC_ce860.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -msse4.1 -DUSE_SSE4_1 -msse4.2 -DUSE_SSE4_2 -DUSE_AVX2 -DUSE_AVX -msse3 -DUSE_SSE3 -msse2 -DUSE_SSE2  -std=gnu99 -DHAVE_GCC_GET_CPUID     -Wl,--whole-archive CMakeFiles\cmTC_ce860.dir/objects.a -Wl,--no-whole-archive  -o cmTC_ce860.exe -Wl,--out-implib,libcmTC_ce860.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_ce860.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_7713f/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_7713f.dir\build.make CMakeFiles/cmTC_7713f.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7713f.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe   -msse4.1 -DUSE_SSE4_1 -msse4.2 -DUSE_SSE4_2 -DUSE_AVX2 -DUSE_AVX -msse3 -DUSE_SSE3 -msse2 -DUSE_SSE2  -std=gnu99 -DHAVE_GCC_GET_CPUID    -o CMakeFiles\cmTC_7713f.dir\CheckIncludeFile.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Linking C executable cmTC_7713f.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_7713f.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_7713f.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_7713f.dir/objects.a @CMakeFiles\cmTC_7713f.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -msse4.1 -DUSE_SSE4_1 -msse4.2 -DUSE_SSE4_2 -DUSE_AVX2 -DUSE_AVX -msse3 -DUSE_SSE3 -msse2 -DUSE_SSE2  -std=gnu99 -DHAVE_GCC_GET_CPUID     -Wl,--whole-archive CMakeFiles\cmTC_7713f.dir/objects.a -Wl,--no-whole-archive  -o cmTC_7713f.exe -Wl,--out-implib,libcmTC_7713f.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_7713f.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_3fcd2/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_3fcd2.dir\build.make CMakeFiles/cmTC_3fcd2.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3fcd2.dir/CheckIncludeFile.c.obj
+C:\MinGW\bin\gcc.exe   -msse4.1 -DUSE_SSE4_1 -msse4.2 -DUSE_SSE4_2 -DUSE_AVX2 -DUSE_AVX -msse3 -DUSE_SSE3 -msse2 -DUSE_SSE2  -std=gnu99 -DHAVE_GCC_GET_CPUID    -o CMakeFiles\cmTC_3fcd2.dir\CheckIncludeFile.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+Linking C executable cmTC_3fcd2.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_3fcd2.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_3fcd2.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_3fcd2.dir/objects.a @CMakeFiles\cmTC_3fcd2.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -msse4.1 -DUSE_SSE4_1 -msse4.2 -DUSE_SSE4_2 -DUSE_AVX2 -DUSE_AVX -msse3 -DUSE_SSE3 -msse2 -DUSE_SSE2  -std=gnu99 -DHAVE_GCC_GET_CPUID     -Wl,--whole-archive CMakeFiles\cmTC_3fcd2.dir/objects.a -Wl,--no-whole-archive  -o cmTC_3fcd2.exe -Wl,--out-implib,libcmTC_3fcd2.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_3fcd2.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of void* passed with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_0795d/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_0795d.dir\build.make CMakeFiles/cmTC_0795d.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0795d.dir/SIZE_OF_VOIDP.c.obj
+C:\MinGW\bin\gcc.exe   -msse4.1 -DUSE_SSE4_1 -msse4.2 -DUSE_SSE4_2 -DUSE_AVX2 -DUSE_AVX -msse3 -DUSE_SSE3 -msse2 -DUSE_SSE2  -std=gnu99 -DHAVE_GCC_GET_CPUID    -o CMakeFiles\cmTC_0795d.dir\SIZE_OF_VOIDP.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CheckTypeSize\SIZE_OF_VOIDP.c
+Linking C executable cmTC_0795d.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_0795d.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_0795d.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_0795d.dir/objects.a @CMakeFiles\cmTC_0795d.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -msse4.1 -DUSE_SSE4_1 -msse4.2 -DUSE_SSE4_2 -DUSE_AVX2 -DUSE_AVX -msse3 -DUSE_SSE3 -msse2 -DUSE_SSE2  -std=gnu99 -DHAVE_GCC_GET_CPUID     -Wl,--whole-archive CMakeFiles\cmTC_0795d.dir/objects.a -Wl,--no-whole-archive  -o cmTC_0795d.exe -Wl,--out-implib,libcmTC_0795d.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_0795d.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+
+Performing C SOURCE FILE Test C_HAS_THREAD succeeded with the following output:
+Change Dir: F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_990c9/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_990c9.dir\build.make CMakeFiles/cmTC_990c9.dir/build
+mingw32-make.exe[1]: Entering directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_990c9.dir/src.c.obj
+C:\MinGW\bin\gcc.exe   -msse4.1 -DUSE_SSE4_1 -msse4.2 -DUSE_SSE4_2 -DUSE_AVX2 -DUSE_AVX -msse3 -DUSE_SSE3 -msse2 -DUSE_SSE2  -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_THREAD   -o CMakeFiles\cmTC_990c9.dir\src.c.obj   -c F:\test\torch7_TH\TH\build\CMakeFiles\CMakeTmp\src.c
+Linking C executable cmTC_990c9.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_990c9.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_990c9.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_990c9.dir/objects.a @CMakeFiles\cmTC_990c9.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -msse4.1 -DUSE_SSE4_1 -msse4.2 -DUSE_SSE4_2 -DUSE_AVX2 -DUSE_AVX -msse3 -DUSE_SSE3 -msse2 -DUSE_SSE2  -std=gnu99 -DHAVE_GCC_GET_CPUID -DC_HAS_THREAD    -Wl,--whole-archive CMakeFiles\cmTC_990c9.dir/objects.a -Wl,--no-whole-archive  -o cmTC_990c9.exe -Wl,--out-implib,libcmTC_990c9.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_990c9.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'F:/test/torch7_TH/TH/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+static __thread int x = 1; int main() { return x; }
