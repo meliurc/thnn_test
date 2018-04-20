@@ -13,4 +13,6 @@ ADD_EXECUTABLE(thnn_test main.c)
 
 TARGET_LINK_LIBRARIES(thnn_test F:/test/thnn_test/libTH.dll)
 TARGET_LINK_LIBRARIES(thnn_test F:/test/thnn_test/libTHNN.dll)
+TARGET_LINK_LIBRARIES(thnn_test F:/test/thnn_test/libblas.dll)
+TARGET_LINK_LIBRARIES(thnn_test F:/test/thnn_test/liblapack.dll)
 
