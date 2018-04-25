@@ -67,28 +67,34 @@ int THTest{
 };
 
 int SpatialConvolutionMMTest{
-    int sizeInput = 3*32*32; int layersInput = 3; int heightInput = 32; int widthInput = 32;
+    // simple test: 1 nInputPlane, 1 nOutputPlane
+    int layersInput = 1; int heightInput = 4; int widthInput = 4;
+    int sizeInput = layersInput*heightInput*widthInput;
     real *input = malloc(sizeInput*sizeof(real));
     initStorageData(input, sizeInput);
     THStorage* storageInput = THStorage_(newWithData)(input, (ptrdiff_t)sizeInput);
     THTensor* tensorInput = THTensor_(newWithStorage3d)(storageInput, 0,
-                                                        layersInput, widthInput*heightInput,
-                                                        heightInput, widthInput,
-                                                        widthInput, 1);
+                                                        layersInput, -1,
+                                                        heightInput, -1,
+                                                        widthInput,  -1);
 
-    int sizeKernel = 3*3; int heightKernel = 3; int widthKernel = 3;
+    int nInputPlane = 1; int nOutputPlane = 1; int heightKernel = 3; int widthKernel = 3;
+    int sizeKernel = nInputPlane*nOutputPlane*heightKernel*widthKernel;
     real *kernel = malloc(sizeKernel*sizeof(real));
-    initStorageData(kernel, sizeKernel);
+    initKernelData(kernel, sizeKernel);
     THStorage* storageKernel = THStorage_(newWithData)(kernel, (ptrdiff_t)sizeKernel);
-    THTensor* tensorKernel = THTensor_(newWithStorage2d)(storageKernel, 0,
-                                                         heightKernel, widthKernel,
-                                                         widthKernel, 1);
+    THTensor* tensorKernel = THTensor_(newWithStorage4d)(storageKernel, 0,
+                                                         nOutputPlane, -1,
+                                                         nInputPlane,  -1,
+                                                         heightKernel, -1,
+                                                         widthKernel,  -1);
 
     THTensor* tensorOutput = THTensor_(new)();
     THTensor* tensorFInput = THTensor_(new)();
     THTensor* tensorFGradInput = THTensor_(new)();
 
     THNNState* state = NULL;
+
 
     THNN_(SpatialConvolutionMM_updateOutput)(
             state,
@@ -97,11 +103,13 @@ int SpatialConvolutionMMTest{
             tensorKernel,
             NULL,
             tensorFInput,
-            tensorFGradInput,
+            NULL,
             widthKernel,
             heightKernel,
             1,
             1,
             0,
             0);
+
+    printTensorData(tensorOutput);
 };
