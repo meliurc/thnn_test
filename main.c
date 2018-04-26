@@ -10,32 +10,42 @@
 #define Real Double
 #define real double
 
+#include "utils/helperFunctions.h"
 
-void initStorageData(real *data, int size){
-    for(int i=0; i<size; i++){
-        *data = i;
-        data++;
+static THTensor* THNN_(view_weight_MM2d)(THTensor *weight) {
+    weight = THTensor_(newContiguous)(weight);
+    if (weight->nDimension == 4) {
+        long s1 = weight->size[0];
+        long s2 = weight->size[1] * weight->size[2] * weight->size[3];
+        THTensor *old_weight = weight;
+        weight = THTensor_(newWithStorage2d)(weight->storage, weight->storageOffset,
+                                             s1, -1, s2, -1);
+        THTensor_(free)(old_weight);
     }
-    data = data - size;
+    return weight;
 }
 
 int main(){
-    int sizeInput = 3*32*32; int layersInput = 3; int heightInput = 32; int widthInput = 32;
+    int layersInput = 1; int heightInput = 3; int widthInput = 3;
+    int sizeInput = layersInput*heightInput*widthInput;
     real *input = malloc(sizeInput*sizeof(real));
     initStorageData(input, sizeInput);
     THStorage* storageInput = THStorage_(newWithData)(input, (ptrdiff_t)sizeInput);
     THTensor* tensorInput = THTensor_(newWithStorage3d)(storageInput, 0,
-                                                        layersInput, widthInput*heightInput,
-                                                        heightInput, widthInput,
-                                                        widthInput, 1);
+                                                        layersInput, -1,
+                                                        heightInput, -1,
+                                                        widthInput,  -1);
 
-    int sizeKernel = 3*3; int heightKernel = 3; int widthKernel = 3;
+    int nInputPlane = 1; int nOutputPlane = 1; int heightKernel = 2; int widthKernel = 2;
+    int sizeKernel = nInputPlane*nOutputPlane*heightKernel*widthKernel;
     real *kernel = malloc(sizeKernel*sizeof(real));
-    initStorageData(kernel, sizeKernel);
+    initKernelData(kernel, sizeKernel);
     THStorage* storageKernel = THStorage_(newWithData)(kernel, (ptrdiff_t)sizeKernel);
-    THTensor* tensorKernel = THTensor_(newWithStorage2d)(storageKernel, 0,
-                                                         heightKernel, widthKernel,
-                                                         widthKernel, 1);
+    THTensor* tensorKernel = THTensor_(newWithStorage4d)(storageKernel, 0,
+                                                         nOutputPlane, -1,
+                                                         nInputPlane,  -1,
+                                                         heightKernel, -1,
+                                                         widthKernel,  -1);
 
     THTensor* tensorOutput = THTensor_(new)();
     THTensor* tensorFInput = THTensor_(new)();
@@ -43,20 +53,34 @@ int main(){
 
     THNNState* state = NULL;
 
+    tensorKernel = THNN_(view_weight_MM2d)(tensorKernel);
 
-    THNN_(SpatialConvolutionMM_updateOutput)(
-            state,
-            tensorInput,
-            tensorOutput,
-            tensorKernel,
-            NULL,
-            tensorFInput,
-            tensorFGradInput,
-            widthKernel,
-            heightKernel,
-            1,
-            1,
-            0,
-            0);
-
+//    input = THTensor_(newContiguous)(input);
+//    int ndim = input->nDimension;
+//    int dimf = 0;
+//    int dimh = 1;
+//    int dimw = 2;
+//
+//    if (ndim == 4) {
+//        dimf++;
+//        dimh++;
+//        dimw++;
+//    }
+//
+//    THNN_(SpatialConvolutionMM_updateOutput)(
+//            state,
+//            tensorInput,
+//            tensorOutput,
+//            tensorKernel,
+//            NULL,
+//            tensorFInput,
+//            NULL,
+//            widthKernel,
+//            heightKernel,
+//            1,
+//            1,
+//            0,
+//            0);
+//
+//    printTensorData(tensorOutput);
 }
