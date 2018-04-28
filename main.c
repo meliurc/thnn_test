@@ -210,7 +210,7 @@ int main(){
                                                         heightInput, -1,
                                                         widthInput,  -1);
 
-    int nInputPlane = 2; int nOutputPlane = 1; int heightKernel = 2; int widthKernel = 2;
+    int nInputPlane = 2; int nOutputPlane = 2; int heightKernel = 2; int widthKernel = 2;
     int sizeKernel = nInputPlane*nOutputPlane*heightKernel*widthKernel;
     real *kernel = malloc(sizeKernel*sizeof(real));
     initKernelData(kernel, sizeKernel);
