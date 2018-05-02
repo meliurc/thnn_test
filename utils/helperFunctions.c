@@ -14,7 +14,7 @@ void initStorageData(real *data, int size){
 
 void initKernelData(real *kernel, int size){
     for(int i=0; i<size; i++){
-        *kernel = i;
+        *kernel = 1;
         kernel++;
     }
     kernel = kernel - size;

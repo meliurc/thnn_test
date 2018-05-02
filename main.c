@@ -9,194 +9,82 @@
 
 #define Real Double
 #define real double
+#define accreal double
 
 #include "utils/helperFunctions.h"
 
-void THTensor_(addmm)(THTensor *r_, real beta, THTensor *t, real alpha, THTensor *m1, THTensor *m2)
+#define TH_CONVERT_ACCREAL_TO_REAL(_val) (real)(_val)
+
+void THNN_(Linear_updateAddBuffer)(
+        THNNState *state,
+        THTensor *input,
+        THTensor *addBuffer)
 {
-    char transpose_r, transpose_m1, transpose_m2;
-    THTensor *r__, *m1_, *m2_;
-
-    if( (m1->nDimension != 2) || (m2->nDimension != 2))
-        THError("matrices expected, got %dD, %dD tensors", m1->nDimension, m2->nDimension);
-
-    if(m1->size[1] != m2->size[0]) {
-        THDescBuff bm1 = THTensor_(sizeDesc)(m1);
-        THDescBuff bm2 = THTensor_(sizeDesc)(m2);
-        THError("size mismatch, m1: %s, m2: %s", bm1.str, bm2.str);
+    long nframe = THTensor_(size)(input,0);
+    long nElement = THTensor_(nElement)(addBuffer);
+    if (nElement != nframe) {
+        THTensor_(resize1d)(addBuffer,nframe);
+        THTensor_(fill)(addBuffer,1.0);
     }
+}
 
-    if( t->nDimension != 2 )
-        THError("matrix expected, got %dD tensor for t", t->nDimension);
+void THNN_(Linear_updateGradInput)(
+        THNNState *state,
+        THTensor *input,
+        THTensor *gradOutput,
+        THTensor *gradInput,
+        THTensor *weight)
+{
+    if (gradInput) {
+        long nElement = THTensor_(nElement)(gradInput);
+        THTensor_(resizeAs)(gradInput,input);
+        if (THTensor_(nElement)(gradInput) != nElement) {
+            THTensor_(zero)(gradInput);
+        }
 
-    if( (t->size[0] != m1->size[0]) || (t->size[1] != m2->size[1]) ) {
-        THDescBuff bt  = THTensor_(sizeDesc)(t);
-        THDescBuff bm1 = THTensor_(sizeDesc)(m1);
-        THDescBuff bm2 = THTensor_(sizeDesc)(m2);
-        THError("size mismatch, t: %s, m1: %s, m2: %s", bt.str, bm1.str, bm2.str);
-    }
-
-    if(t != r_)
-    {
-        THTensor_(resizeAs)(r_, t);
-        if (beta != 0.0) {
-            THTensor_(copy)(r_, t);
+        long dim = THTensor_(nDimension)(input);
+        if (dim == 1) {
+            THTensor *tweight = THTensor_(new)();
+            THTensor_(transpose)(tweight,weight,0,1);
+            THTensor_(addmv)(gradInput,0,gradInput,1,tweight,gradOutput);
+            THTensor_(free)(tweight);
+        }
+        else if (dim == 2) {
+            THTensor_(addmm)(gradInput,0,gradInput,1,gradOutput,weight);
         }
     }
-
-    /* r_ */
-    if(r_->stride[0] == 1 &&
-       r_->stride[1] != 0)
-    {
-        transpose_r = 'n';
-        r__ = r_;
-    }
-    else if(r_->stride[1] == 1 &&
-            r_->stride[0] != 0)
-    {
-        THTensor *swap = m2;
-        m2 = m1;
-        m1 = swap;
-        transpose_r = 't';
-        r__ = r_;
-    }
-    else
-    {
-        transpose_r = 'n';
-
-        THTensor *transp_r_ = THTensor_(newTranspose)(r_, 0, 1);
-        r__ = THTensor_(newClone)(transp_r_);
-        THTensor_(free)(transp_r_);
-        THTensor_(transpose)(r__, NULL, 0, 1);
-    }
-
-    /* m1 */
-    if(m1->stride[(transpose_r == 'n' ? 0 : 1)] == 1 &&
-       m1->stride[(transpose_r == 'n' ? 1 : 0)] != 0)
-    {
-        transpose_m1 = 'n';
-        m1_ = m1;
-    }
-    else if(m1->stride[(transpose_r == 'n' ? 1 : 0)] == 1 &&
-            m1->stride[(transpose_r == 'n' ? 0 : 1)] != 0)
-    {
-        transpose_m1 = 't';
-        m1_ = m1;
-    }
-    else
-    {
-        transpose_m1 = (transpose_r == 'n' ? 't' : 'n');
-        m1_ = THTensor_(newContiguous)(m1);
-    }
-
-    /* m2 */
-    if(m2->stride[(transpose_r == 'n' ? 0 : 1)] == 1 &&
-       m2->stride[(transpose_r == 'n' ? 1 : 0)] != 0)
-    {
-        transpose_m2 = 'n';
-        m2_ = m2;
-    }
-    else if(m2->stride[(transpose_r == 'n' ? 1 : 0)] == 1 &&
-            m2->stride[(transpose_r == 'n' ? 0 : 1)] != 0)
-    {
-        transpose_m2 = 't';
-        m2_ = m2;
-    }
-    else
-    {
-        transpose_m2 = (transpose_r == 'n' ? 't' : 'n');
-        m2_ = THTensor_(newContiguous)(m2);
-    }
-
-#pragma omp critical(blasgemm)
-    /* do the operation */
-    THBlas_(gemm)(transpose_m1,
-                  transpose_m2,
-                  r__->size[(transpose_r == 'n' ? 0 : 1)],
-                  r__->size[(transpose_r == 'n' ? 1 : 0)],
-                  m1_->size[(transpose_r == 'n' ? 1 : 0)],
-                  alpha,
-                  THTensor_(data)(m1_),
-                  (transpose_m1 == 'n' ? m1_->stride[(transpose_r == 'n' ? 1 : 0)] : m1_->stride[(transpose_r == 'n' ? 0 : 1)]),
-                  THTensor_(data)(m2_),
-                  (transpose_m2 == 'n' ? m2_->stride[(transpose_r == 'n' ? 1 : 0)] : m2_->stride[(transpose_r == 'n' ? 0 : 1)]),
-                  beta,
-                  THTensor_(data)(r__),
-                  r__->stride[(transpose_r == 'n' ? 1 : 0)]);
-
-    /* free intermediate variables */
-    if(m1_ != m1)
-        THTensor_(free)(m1_);
-
-    if(m2_ != m2)
-        THTensor_(free)(m2_);
-
-    if(r__ != r_)
-        THTensor_(freeCopyTo)(r__, r_);
 }
 
-static THTensor* THNN_(view_weight_MM2d)(THTensor *weight) {
-    weight = THTensor_(newContiguous)(weight);
-    if (weight->nDimension == 4) {
-        long s1 = weight->size[0];
-        long s2 = weight->size[1] * weight->size[2] * weight->size[3];
-        THTensor *old_weight = weight;
-        weight = THTensor_(newWithStorage2d)(weight->storage, weight->storageOffset,
-                                             s1, -1, s2, -1);
-        THTensor_(free)(old_weight);
-    }
-    return weight;
-}
-
-static void THNN_(SpatialConvolutionMM_updateOutput_frame)(
+void THNN_(Linear_accGradParameters)(
+        THNNState *state,
         THTensor *input,
-        THTensor *output,
+        THTensor *gradOutput,
+        THTensor *gradInput,
         THTensor *weight,
         THTensor *bias,
-        THTensor *finput,
-        int kW,
-        int kH,
-        int dW,
-        int dH,
-        int padW,
-        int padH,
-        long nInputPlane,
-        long inputWidth,
-        long inputHeight,
-        long nOutputPlane,
-        long outputWidth,
-        long outputHeight)
+        THTensor *gradWeight,
+        THTensor *gradBias,
+        THTensor *addBuffer,
+        accreal scale_)
 {
-    long i;
-    THTensor *output2d;
-
-    printTensorData(input);
-
-    THNN_(unfolded_copy)(finput, input, kW, kH, dW, dH, padW, padH,
-                         nInputPlane, inputWidth, inputHeight,
-                         outputWidth, outputHeight);
-
-    output2d = THTensor_(newWithStorage2d)(output->storage, output->storageOffset,
-                                           nOutputPlane, -1,
-                                           outputHeight*outputWidth, -1);
-    if (bias) {
-        for(i = 0; i < nOutputPlane; i++)
-            THVector_(fill)
-                    (output->storage->data + output->storageOffset + output->stride[0] * i,
-                     THTensor_(get1d)(bias, i), outputHeight*outputWidth);
-    } else {
-        THTensor_(zero)(output);
+    real scale = TH_CONVERT_ACCREAL_TO_REAL(scale_);
+    long dim = THTensor_(nDimension)(input);
+    if (dim == 1) {
+        THTensor_(addr)(gradWeight,1,gradWeight,scale,gradOutput,input);
+        if (bias) {
+            THTensor_(cadd)(gradBias,gradBias,scale,gradOutput);
+        }
     }
-
-    printTensorData(weight);
-    printTensorData(finput);
-
-//    void THTensor_(addmm)(THTensor *r_, real beta, THTensor *t, real alpha, THTensor *m1, THTensor *m2)
-    THTensor_(addmm)(output2d, 1, output2d, 1, weight, finput);
-
-    printTensorData(output);
-
-    THTensor_(free)(output2d);
+    else if (dim == 2) {
+        THTensor *tgradOutput = THTensor_(new)();
+        THTensor_(transpose)(tgradOutput,gradOutput,0,1);
+        THTensor_(addmm)(gradWeight,1,gradWeight,scale,tgradOutput,input);
+        if (bias) {
+            THNN_(Linear_updateAddBuffer)(state,input,addBuffer);
+            THTensor_(addmv)(gradBias,1,gradBias,scale,tgradOutput,addBuffer);
+        }
+        THTensor_(free)(tgradOutput);
+    }
 }
 
 int main(){
@@ -204,8 +92,8 @@ int main(){
     int sizeInput = layersInput*heightInput*widthInput;
     real *input = malloc(sizeInput*sizeof(real));
     initStorageData(input, sizeInput);
-    THStorage* storageInput = THStorage_(newWithData)(input, (ptrdiff_t)sizeInput);
-    THTensor* tensorInput = THTensor_(newWithStorage3d)(storageInput, 0,
+    THStorage* storageCnnInput = THStorage_(newWithData)(input, (ptrdiff_t)sizeInput);
+    THTensor* tensorCnnInput = THTensor_(newWithStorage3d)(storageCnnInput, 0,
                                                         layersInput, -1,
                                                         heightInput, -1,
                                                         widthInput,  -1);
@@ -221,58 +109,112 @@ int main(){
                                                          heightKernel, -1,
                                                          widthKernel,  -1);
 
-    THTensor* tensorOutput = THTensor_(new)();
-    THTensor* tensorFInput = THTensor_(new)();
-    THTensor* tensorFGradInput = THTensor_(new)();
+    int nLinearWeight = 1; int sizeLinearWeight = nOutputPlane*heightKernel*widthKernel;
+    real *linearWeight = malloc(sizeLinearWeight*sizeof(real));
+    initKernelData(linearWeight, sizeLinearWeight);
+    THStorage* storageLinearWeight = THStorage_(newWithData)(linearWeight, (ptrdiff_t)sizeLinearWeight);
+    THTensor* tensorLinearWeight = THTensor_(newWithStorage2d)(storageLinearWeight, 0,
+                                                               nLinearWeight, -1,
+                                                               sizeLinearWeight, -1);
+
+    int sizeLinearBias = nOutputPlane*heightKernel*widthKernel;
+    real *linearBias = malloc(sizeLinearBias*sizeof(real));
+    initKernelData(linearBias, sizeLinearBias);
+    THStorage* storageLinearBias = THStorage_(newWithData)(linearBias, (ptrdiff_t)sizeLinearBias);
+    THTensor* tensorLinearBias = THTensor_(newWithStorage1d)(storageLinearBias, 0, nLinearWeight, -1);
+
+    THTensor* tensorCnnOutput = THTensor_(new)();
+    THTensor* tensorCnnFInput = THTensor_(new)();
+    THTensor* tensorCnnFGradInput = THTensor_(new)();
 
     THNNState* state = NULL;
 
-    tensorKernel = THNN_(view_weight_MM2d)(tensorKernel);
-    tensorInput = THTensor_(newContiguous)(tensorInput);
-    int ndim = tensorInput->nDimension;
-    int dimf = 0;
-    int dimh = 1;
-    int dimw = 2;
+    THNN_(SpatialConvolutionMM_updateOutput)(
+        state,
+        tensorCnnInput,
+        tensorCnnOutput,
+        tensorKernel,
+        NULL,
+        tensorCnnFInput,
+        NULL,
+        widthKernel,
+        heightKernel,
+        1,
+        1,
+        0,
+        0);
 
-    if (ndim == 4) {
-        dimf++;
-        dimh++;
-        dimw++;
-    }
+    THTensor *tensorLinearInput = THTensor_(newWithStorage2d)(tensorCnnOutput->storage, 0,
+                                                              nLinearWeight, -1,
+                                                              sizeLinearWeight, -1);
+    THTensor *tensorLinearOutput = THTensor_(new)();
+    THTensor *tensorLinearAddBuffer = THTensor_(new)();
 
-    nInputPlane  = tensorInput->size[dimf];
-    long inputHeight  = tensorInput->size[dimh];
-    long inputWidth   = tensorInput->size[dimw];
-    nOutputPlane = tensorKernel->size[0];
-    long outputHeight = (inputHeight + 2*0 - heightKernel) / 1 + 1;
-    long outputWidth  = (inputWidth + 2*0 - widthKernel) / 1 + 1;
+    THNN_(Linear_updateOutput)(
+            state,
+            tensorLinearInput,
+            tensorLinearOutput,
+            tensorLinearWeight,
+            tensorLinearBias,
+            tensorLinearAddBuffer);
 
-    THTensor_(resize2d)(tensorFInput, widthKernel*heightKernel*nInputPlane, outputHeight*outputWidth);
-    THTensor_(resize3d)(tensorOutput, nOutputPlane, outputHeight, outputWidth);
-
-    THNN_(SpatialConvolutionMM_updateOutput_frame)
-            (tensorInput, tensorOutput, tensorKernel, NULL, tensorFInput,
-             widthKernel, heightKernel, 1, 1, 0, 0,
-             nInputPlane, inputWidth, inputHeight,
-             nOutputPlane, outputWidth, outputHeight);
-
-//    printTensorData(tensorOutput);
+    THTensor *tensorLinearGradInput = THTensor_(new)();
 
 
-//    THNN_(SpatialConvolutionMM_updateOutput)(
-//            state,
-//            tensorInput,
-//            tensorOutput,
-//            tensorKernel,
-//            NULL,
-//            tensorFInput,
-//            NULL,
-//            widthKernel,
-//            heightKernel,
-//            1,
-//            1,
-//            0,
-//            0);
-//
-//    printTensorData(tensorOutput);
+    real *gradOutputOnes = malloc(nLinearWeight*sizeof(real));
+    initKernelData(gradOutputOnes, nLinearWeight);
+    THStorage* storageGradOutputOnes = THStorage_(newWithData)(gradOutputOnes, (ptrdiff_t)nLinearWeight);
+    THTensor* tensorGradOutputOnes = THTensor_(newWithStorage2d)(storageGradOutputOnes, 0,
+                                                                 1, -1,
+                                                                 nLinearWeight, -1);
+
+    THTensor *tensorLinearGradOutput = tensorGradOutputOnes;
+
+    THNN_(Linear_updateGradInput)(
+            state,
+            tensorLinearInput,
+            tensorLinearGradOutput,
+            tensorLinearGradInput,
+            tensorLinearWeight);
+
+    printTensorData(tensorLinearGradInput);
+
+    THTensor *tensorLinearGradWeight = THTensor_(newWithSize2d)(tensorLinearWeight->size[0], tensorLinearWeight->size[1]);
+    THTensor *tensorLinearGradBias = THTensor_(newWithSize1d)(tensorLinearBias->size[0]);
+
+
+    THNN_(Linear_accGradParameters)(
+            state,
+            tensorLinearInput,
+            tensorLinearGradOutput,
+            tensorLinearGradInput,
+            tensorLinearWeight,
+            tensorLinearBias,
+            tensorLinearGradWeight,
+            tensorLinearGradBias,
+            tensorLinearAddBuffer,
+            1.);
+
+    printTensorData(tensorLinearGradWeight);
+
+    // updateGradInput(input, gradOutput) + accGradParameters(input,gradOutput,scale)
+
+//    THNN_(Linear_updateGradInput)(
+//            THNNState *state,
+//            THTensor *input,
+//            THTensor *gradOutput,
+//            THTensor *gradInput,
+//            THTensor *weight)
+
+//    THNN_(Linear_accGradParameters)(
+//            THNNState *state,
+//            THTensor *input,
+//            THTensor *gradOutput,
+//            THTensor *gradInput,
+//            THTensor *weight,
+//            THTensor *bias,
+//            THTensor *gradWeight,
+//            THTensor *gradBias,
+//            THTensor *addBuffer,
+//    accreal scale_)
 }
