@@ -21,6 +21,17 @@ void initKernelData(real *kernel, int size){
 }
 
 void printTensorData(THTensor* tensor){
+    if (tensor->nDimension == 1){
+        long H = tensor->size[0];
+
+        for (int i=0; i < tensor->size[0]; i++) {
+            printf("%.2f", tensor->storage->data[i]);
+            if (i < tensor->size[0]-1)
+                printf(", ");
+        }
+        printf("\n");
+    }
+
     if (tensor->nDimension == 2){
         long H = tensor->size[0];
         long W = tensor->size[1];

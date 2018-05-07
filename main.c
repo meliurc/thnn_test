@@ -123,6 +123,8 @@ int main(){
     THStorage* storageLinearBias = THStorage_(newWithData)(linearBias, (ptrdiff_t)sizeLinearBias);
     THTensor* tensorLinearBias = THTensor_(newWithStorage1d)(storageLinearBias, 0, nLinearWeight, -1);
 
+
+    // Forward propagation
     THTensor* tensorCnnOutput = THTensor_(new)();
     THTensor* tensorCnnFInput = THTensor_(new)();
     THTensor* tensorCnnFGradInput = THTensor_(new)();
@@ -160,7 +162,7 @@ int main(){
 
     THTensor *tensorLinearGradInput = THTensor_(new)();
 
-
+    // Back propagation - Linear layer
     real *gradOutputOnes = malloc(nLinearWeight*sizeof(real));
     initKernelData(gradOutputOnes, nLinearWeight);
     THStorage* storageGradOutputOnes = THStorage_(newWithData)(gradOutputOnes, (ptrdiff_t)nLinearWeight);
@@ -177,7 +179,8 @@ int main(){
             tensorLinearGradInput,
             tensorLinearWeight);
 
-    printTensorData(tensorLinearGradInput);
+//    printTensorData(tensorLinearGradInput);
+//    printTensorData(tensorLinearGradOutput);
 
     THTensor *tensorLinearGradWeight = THTensor_(newWithSize2d)(tensorLinearWeight->size[0], tensorLinearWeight->size[1]);
     THTensor *tensorLinearGradBias = THTensor_(newWithSize1d)(tensorLinearBias->size[0]);
@@ -195,26 +198,54 @@ int main(){
             tensorLinearAddBuffer,
             1.);
 
+    printTensorData(tensorLinearGradInput);
     printTensorData(tensorLinearGradWeight);
+    printTensorData(tensorLinearGradBias);
 
-    // updateGradInput(input, gradOutput) + accGradParameters(input,gradOutput,scale)
+    // Back propagation - CNN layer
+    THTensor *tensorCnnGradOutput = tensorLinearWeight;
+    THTensor_(resize3d)(tensorCnnGradOutput, 2, 2, 2);
 
-//    THNN_(Linear_updateGradInput)(
-//            THNNState *state,
-//            THTensor *input,
-//            THTensor *gradOutput,
-//            THTensor *gradInput,
-//            THTensor *weight)
+    THTensor *tensorCnnGradInput = THTensor_(new)();
 
-//    THNN_(Linear_accGradParameters)(
-//            THNNState *state,
-//            THTensor *input,
-//            THTensor *gradOutput,
-//            THTensor *gradInput,
-//            THTensor *weight,
-//            THTensor *bias,
-//            THTensor *gradWeight,
-//            THTensor *gradBias,
-//            THTensor *addBuffer,
-//    accreal scale_)
+    printTensorData(tensorCnnGradOutput);
+
+    THNN_(SpatialConvolutionMM_updateGradInput)(
+            state,
+            tensorCnnInput,
+            tensorCnnGradOutput,
+            tensorCnnGradInput,
+            tensorKernel,
+            tensorCnnFInput,
+            tensorCnnFGradInput,
+            widthKernel,
+            heightKernel,
+            1,
+            1,
+            0,
+            0);
+
+
+    THTensor *tensorCnnGradKernelWeight = THTensor_(newWithSize4d)(2, 2, 2, 2);
+    THTensor *tensorCnnGradKernelBias = THTensor_(newWithSize1d)(2);
+
+    THNN_(SpatialConvolutionMM_accGradParameters)(
+            state,
+            tensorCnnInput,
+            tensorCnnGradOutput,
+            tensorCnnGradKernelWeight,
+            tensorCnnGradKernelBias,
+            tensorCnnFInput,
+            tensorCnnFGradInput,
+            widthKernel,
+            heightKernel,
+            1,
+            1,
+            0,
+            0,
+            1.);
+
+    printTensorData(tensorCnnGradKernelWeight);
+
+
 }
